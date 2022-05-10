@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		body {
+			font-family: 'Consolas';
+		}
+
+		table {
+			font-weight: bold;
+			color: darkred;
+			text-align: left;
+		}
+
+		td {
+			width: 4em;
+			height: 2em;
+			float: left;
+			padding-left: 10px;
+			padding-top: 5px;
+		}
+
+		th {
+			width: 4em;
+			height: 2em;
+			float: left;
+			padding-left: 10px;
+			padding-top: 5px;
+
+			border-top: 3px solid brown;
+			border-bottom: 3px solid brown;
+
+		}
+
+		tr {
+
+			margin: 0px 0px 0px 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div>
+		<script>
+
+			//Ширина та висота таблиці у стовпцях та рядках
+			const w = 10;
+			const h = 10;
+
+			//Кольори для парних і непарних рядків
+			const even = 'white';
+			const notEven = '#efd3d2';
+			
+			//Виводимо текст 'Цей текст'
+			document.write(`<b style="margin-left :${w * 4}em;">Це текст.</b>`);
+			
+			//Відкриття тегу таблиці
+			document.write('<table>');
+
+			//Проходимось по кількості стовпців
+			for (let i = 0; i < h; i++) {
+
+				//Визначення кольору рядка, якщо номер рядка парний
+				let color = even;
+
+				//Непарні числа при операції AND повертають 1 
+				if (i & 1) {
+					color = notEven;
+				}
+
+				//Виведення та заповнення рядків
+				document.write(`<tr style=\"background-color:${color};\">`);
+				for (let j = 0; j < w; j++) {
+					let tag = 'td';
+
+					if (!i) {
+						tag = 'th';
+					}
+
+					//Текст виводиться тільки на початку рядка або завжди в першому
+					if (!(i && j)) {
+						document.write(`<${tag}>${i + 1}</${tag}>`);
+					}
+				}
+				document.write(`</tr></div>`);
+			}
+			document.write('</table>');
+		</script>
+
+		<script>
+			function dateCalc() {
+				
+				//Отримання введених даних
+				const date1 = document.getElementById('date1').value.split('.');
+				const date2 = document.getElementById('date2').value.split('.');
+
+				//Конвертація введених даних у тип дати
+				const d1 = new Date(date1[2], date1[1] - 1, date1[0]);
+				const d2 = new Date(date2[2], date2[1] - 1, date2[0]);
+
+				//Визначення та виведення результату
+				document.getElementById('dateResult').innerHTML = Math.ceil((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
+			}
+		</script>
+
+		<div>
+			<h3>Калькулятор дати</h3>
+			<input id="date1" type="text">
+			<input id="date2" type="text">
+			<input type="button" value="Порахувати" onclick="dateCalc()">
+			<p id="dateResult"></p>
+		</div>
+
+		<div>
+			<script>
+				function gausAlgorithm() {
+					const year = document.getElementById('year').value;
+					const a = year % 19;
+					const b = year % 4;
+					const c = year % 7;
+					const d = (19 * a + 15) % 30;
+					const e = (2 * b + 4 * c + 6 * d + 6) % 7;
+					const f = d + e;
+
+					const result = document.getElementById('gausResult');
+
+					result.innerHTML = `Великдень буде ${f <= 9 ? 22 + f : f - 9}`;
+
+				}
+			</script>
+
+			<h3>Визначення Великодня</h3>
+			<input id="year" type="text">
+			<input type="button" value="Порахувати" onclick="gausAlgorithm()">
+			<p id="gausResult"></p>
+		</div>
+
+
+
+	</div>
+
+</body>
+
+</html>
