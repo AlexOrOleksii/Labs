@@ -94,14 +94,9 @@
 
 		<script>
 			function dateCalc() {
-				
-				//Отримання введених даних
-				const date1 = document.getElementById('date1').value.split('.');
-				const date2 = document.getElementById('date2').value.split('.');
-
 				//Конвертація введених даних у тип дати
-				const d1 = new Date(date1[2], date1[1] - 1, date1[0]);
-				const d2 = new Date(date2[2], date2[1] - 1, date2[0]);
+				const d1 = new Date(document.getElementById('date1').value);
+				const d2 = new Date(document.getElementById('date2').value);
 
 				//Визначення та виведення результату
 				document.getElementById('dateResult').innerHTML = Math.ceil((d2.getTime() - d1.getTime()) / (1000 * 60 * 60 * 24));
@@ -110,8 +105,8 @@
 
 		<div>
 			<h3>Калькулятор дати</h3>
-			<input id="date1" type="text">
-			<input id="date2" type="text">
+			<input id="date1" type="date">
+			<input id="date2" type="date">
 			<input type="button" value="Порахувати" onclick="dateCalc()">
 			<p id="dateResult"></p>
 		</div>
