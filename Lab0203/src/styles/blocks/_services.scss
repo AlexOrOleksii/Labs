@@ -1,0 +1,52 @@
+.services {
+  display: flex;
+  padding-top: 115px;
+  padding-bottom: 80px;
+
+  &__left {
+    float: left;
+    width: 40%;
+  }
+
+  &__right {
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+    width: 60%;
+  }
+
+  &__descr {
+    width: 80%;
+    margin-top: 50px;
+    color: $black;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__block {
+    float: left;
+    width: 43%;
+    margin: 0  0 30px 30px;
+  }
+
+  &__block__header {
+    margin: 35px 0 17px 0;
+    color: $complimentary-color;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  &__block__descr {
+    width: 95%;
+    max-width: 290px;
+    color: #312f30;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+}

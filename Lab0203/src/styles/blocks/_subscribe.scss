@@ -1,0 +1,37 @@
+.subscribe {
+  position: relative;
+  z-index: 0;
+  padding: 140px 0 140px 0;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: url('img/subscribe_bg.jpg') top / 100% auto no-repeat, rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    filter: blur(4px);
+    content: '';
+  }
+
+  &__header {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: rgb(255, 255, 255, 0.8);
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  &__descr {
+    margin: 0 0 62px 0;
+    color: rgb(255, 255, 255, 0.8);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}

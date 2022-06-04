@@ -1,0 +1,429 @@
+{
+  "ignoreFiles": [
+    "*.min.css",
+    "*.js"
+  ],
+  "extends": [
+    "stylelint-config-htmlacademy",
+    "stylelint-config-standard",
+    "stylelint-config-standard",
+    "stylelint-config-rational-order"
+    ],
+  plugins: [
+    "stylelint-scss",
+    "stylelint-order"
+  ],
+  rules: {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": [
+          "first nested"
+        ],
+        "ignore": [
+          "after-comment",
+          "blockless-after-same-name-blockless",
+          "inside block"
+        ],
+        "message": "Leave a blank line before the @-rule"
+      }
+    ],
+    "at-rule-name-case": [
+      "lower",
+      {
+        "message": "Write @-rules in lower case"
+      }
+    ],
+    "at-rule-name-space-after": [
+      "always",
+      {
+        "message": "Put a space after the @-rule"
+      }
+    ],
+    "at-rule-no-vendor-prefix": [
+      true,
+      {
+        "message": "Don't use vendor prefixes in @-rules"
+      }
+    ],
+    "at-rule-semicolon-newline-after": [
+      "always",
+      {
+        "message": "Put a line break after the @-rule"
+      }
+    ],
+    "block-closing-brace-newline-after": [
+      "always",
+      {
+        "message": "Put a line break after the curly brace"
+      }
+    ],
+    "block-closing-brace-newline-before": [
+      "always",
+      {
+        "message": "Put a line break before the curly brace"
+      }
+    ],
+    "block-opening-brace-newline-after": [
+      "always",
+      {
+        "message": "Put a line break after the opening brace"
+      }
+    ],
+    "block-opening-brace-space-before": [
+      "always",
+      {
+        "message": "Put a space before the curly brace"
+      }
+    ],
+    "color-hex-case": [
+      "lower",
+      {
+        "message": "Specify color HEX values ​​in lowercase letters, not uppercase"
+      }
+    ],
+    "color-hex-length": "long",
+    "color-named": [
+      "never",
+      {
+        "message": "Don't write colors in keywords, use HEX or RGBA"
+      }
+    ],
+    "color-no-invalid-hex": [
+      true,
+      {
+        "message": "HEX color spelled wrong - fix it"
+      }
+    ],
+    "comment-whitespace-inside": [
+      "always",
+      {
+        "message": "Put spaces inside the comment"
+      }
+    ],
+    "comment-word-blacklist": [
+      "/(Dick|Dick|Dick|Dick|Dick|Dick|Fuck|Fuck)/",
+      {
+        "message": "Some stupid comment"
+      }
+    ],
+    "declaration-bang-space-after": [
+      "never",
+      {
+        "message": "Remove the space after the exclamation point"
+      }
+    ],
+    "declaration-bang-space-before": [
+      "always",
+      {
+        "message": "Put a space before the exclamation mark"
+      }
+    ],
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": [
+          "consecutive-duplicates-with-different-values"
+        ],
+        "message": "Don't repeat the rules"
+      }
+    ],
+    "declaration-block-semicolon-newline-after": [
+      "always",
+      {
+        "message": "Put a line break after the rule"
+      }
+    ],
+    "declaration-block-single-line-max-declarations": [
+      one,
+      {
+        "message": "There must be only one rule per line"
+      }
+    ],
+    "declaration-block-trailing-semicolon": [
+      "always",
+      {
+        "message": "Put a semicolon after each rule"
+      }
+    ],
+    "declaration-colon-space-after": [
+      "always",
+      {
+        "message": "Put a space after colon in rules"
+      }
+    ],
+    "declaration-colon-space-before": [
+      "never",
+      {
+        "message": "Don't put a space before a colon in rules"
+      }
+    ],
+    "font-family-name-quotes": [
+      "always-unless-keyword",
+      {
+        "message": "Font name should be enclosed in quotation marks only if it is not a standard family"
+      }
+    ],
+    "font-weight-notation": [
+      "numeric",
+      {
+        "message": "Specify font weight (boldness) as a number, not as a word"
+      }
+    ],
+    "function-calc-no-unspaced-operator": [
+      true,
+      {
+        "message": "For calc() put spaces around the statements"
+      }
+    ],
+    "function-comma-newline-after": [
+      "never-multi-line",
+      {
+        "message": "Don't use line breaks in function arguments"
+      }
+    ],
+    "function-comma-space-after": [
+      "always",
+      {
+        "message": "Put a space in the function after the comma"
+      }
+    ],
+    "function-comma-space-before": [
+      "never",
+      {
+        "message": "Don't put a space before a comma in a function"
+      }
+    ],
+    "function-linear-gradient-no-nonstandard-direction": [
+      true,
+      {
+        "message": "Use standard gradient syntax"
+      }
+    ],
+    "function-name-case": [
+      "lower",
+      {
+        "message": "Write function names in lower case"
+      }
+    ],
+    "function-url-quotes": "always",
+    "indentation": [
+      2,
+      {
+        "message": "Use 2 spaces for alignment"
+      }
+    ],
+    "length-zero-no-unit": [
+      true,
+      {
+        "message": "Don't set units for null values"
+      }
+    ],
+    "max-empty-lines": [
+      one,
+      {
+        "message": "Don't leave extra blank lines"
+      }
+    ],
+    "media-feature-colon-space-after": [
+      "always",
+      {
+        "message": "Put a space in @media after the colon"
+      }
+    ],
+    "media-feature-colon-space-before": [
+      "never",
+      {
+        "message": "Don't put a space before the colon in @media"
+      }
+    ],
+    "media-feature-name-no-vendor-prefix": true,
+    "media-feature-parentheses-space-inside": "never",
+    "media-feature-range-operator-space-after": [
+      "never",
+      {
+        "message": "Don't put spaces inside @media"
+      }
+    ],
+    "media-feature-range-operator-space-before": "never",
+    "no-duplicate-selectors": [
+      true,
+      {
+        "message": "Don't duplicate selectors"
+      }
+    ],
+    "no-eol-whitespace": [
+      true,
+      {
+        "message": "Remove the space at the end of the line",
+        "severity": "warning"
+      }
+    ],
+    "no-extra-semicolons": [
+      true,
+      {
+        "message": "Remove extra semicolons"
+      }
+    ],
+    "number-leading-zero": [
+      "always",
+      {
+        "message": "Put zero before dot in fractional value"
+      }
+    ],
+    "property case": [
+      "lower",
+      {
+        "message": "Properties must be in lower case"
+      }
+    ],
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "message": "Don't use vendor prefixes"
+      }
+    ],
+    "rule-empty-line-before": [
+      "always-multi-line",
+      {
+        "except": [
+          "after-single-line-comment",
+          "first nested"
+        ],
+        "ignore": [
+          "after comment"
+        ],
+        "message": "Check for line breaks between selectors"
+      }
+    ],
+    "selector-attribute-brackets-space-inside": [
+      "never",
+      {
+        "message": "Don't put spaces inside an attribute selector"
+      }
+    ],
+    "selector-attribute-operator-space-after": [
+      "never",
+      {
+        "message": "Don't put spaces inside an attribute selector"
+      }
+    ],
+    "selector-attribute-operator-space-before": [
+      "never",
+      {
+        "message": "Don't put spaces inside an attribute selector"
+      }
+    ],
+    "selector-attribute-quotes": [
+      "always",
+      {
+        "message": "Quote selector attributes"
+      }
+    ],
+    "selector-combinator-space-after": [
+      "always",
+      {
+        "message": "Put a space after the combinator in the selector"
+      }
+    ],
+    "selector-combinator-space-before": [
+      "always",
+      {
+        "message": "Put a space before the combinator in the selector"
+      }
+    ],
+    "selector-list-comma-newline-after": [
+      "always",
+      {
+        "message": "Set line break after comma in selectors"
+      }
+    ],
+    "selector-max-empty-lines": [
+      0,
+      {
+        "message": "Don't put empty strings in selectors"
+      }
+    ],
+    "selector-no-vendor-prefix": true,
+    "selector-pseudo-class-case": [
+      "lower",
+      {
+        "message": "Write pseudo-classes in lowercase"
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "message": "No such pseudo-class ☠"
+      }
+    ],
+    "selector-pseudo-class-parentheses-space-inside": [
+      "never",
+      {
+        "message": "Don't put spaces inside brackets in pseudo selectors"
+      }
+    ],
+    "selector-pseudo-element-case": [
+      "lower",
+      {
+        "message": "Pseudo-elements should be lowercase"
+      }
+    ],
+    "selector-pseudo-element-colon-notation": "double",
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "message": "No such pseudo-element"
+      }
+    ],
+    "selector-type-case": [
+      "lower",
+      {
+        "message": "Please use lower case selectors"
+      }
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "message": "Some wrong selector"
+      }
+    ],
+    "string-quotes": [
+      "single",
+      {
+        "message": "Use single quotes everywhere"
+      }
+    ],
+    "unit case": [
+      "lower",
+      {
+        "message": "Use lowercase letters for units"
+      }
+    ],
+    "unit-no-unknown": [
+      true,
+      {
+        "message": "No such units"
+      }
+    ],
+    "value-keyword-case": [
+      "lower",
+      {
+        "message": "Type property values ​​in lower case"
+      }
+    ],
+    "value-list-comma-newline-after": [
+      "never-multi-line",
+      {
+        "message": ""
+      }
+    ],
+    "value-list-comma-space-after": [
+      "always",
+      {
+        "message": "Put a space after the comma"
+      }
+    ],
+    "value-no-vendor-prefix": true
+  }
+}
